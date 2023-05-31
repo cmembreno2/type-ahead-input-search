@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Type ahead search input</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <div
+      class="w-full h-[100vh] bg-violet-400 flex"
+    >
+      <div class="w-96 relative mt-20 ml-20" onclick="event.stopImmediatePropagation();">
+        <input
+          id="autocompleteInput"
+          placeholder="SELECT AGENT"
+          class="px-5 py-3 w-full border border-gray-300 rounded-md"
+          onkeyup="onChange(event)"
+          onclick="onClick(event)"
+        />
+        <div
+          id="dropdown"
+          class="w-full h-60 border border-gray-300 rounded-md bg-white absolute overflow-y-auto hidden"
+        ></div>
+      </div>
+    </div>
+  </body>
+</html>
