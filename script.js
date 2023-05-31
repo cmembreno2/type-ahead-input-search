@@ -55,9 +55,9 @@ function renderOptions(options) {
 
   let newHtml = ``;
 
-  if (options.length === 0){
+  if (options.length === 0) {
     newHtml = `<div class="px-5 py-3 text-stone-600">--No matches--</div>`;
-  } else{
+  } else {
     options.forEach((agent) => {
       newHtml += `<div
           onclick="selectOption('${agent.name}')"
@@ -76,6 +76,12 @@ function selectOption(selectedOption) {
   hideDropdown();
   let input = document.querySelector("#autocompleteInput");
   input.value = selectedOption;
+
+  setTimeout(() => {
+    let selectedAgent = agents.find((agent) => agent.name === selectedOption);
+
+    alert(`Selection Details\nValue: ${selectedAgent.id}\nLabel: ${selectedAgent.name}`);
+  }, 100);
 }
 
 document.addEventListener("click", () => {
