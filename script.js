@@ -33,8 +33,6 @@ function onChange(e) {
     agent.name.toLowerCase().includes(keyword.toLowerCase())
   );
 
-  console.log(filteredAgents)
-
   renderOptions(filteredAgents);
   adjustDropdownHeight()
 }
