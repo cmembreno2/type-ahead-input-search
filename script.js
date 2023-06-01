@@ -42,6 +42,8 @@ function onChange(e) {
 function onClick(e) {
   let dropdownEl = document.querySelector("#dropdown");
   dropdownEl.classList.remove("hidden")
+  let input = document.querySelector("#autocompleteInput");
+  input.value = "";
 
   renderOptions(agents)
 }
